@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>perl -pe 's/[\t ]+$//g'</string>
+				<key>fallbackInput</key>
+				<string>document</string>
+				<key>input</key>
+				<string>selection</string>
+				<key>name</key>
+				<string>Remove Trailing Spaces in Document / Selection</string>
+				<key>output</key>
+				<string>replaceSelectedText</string>
+				<key>uuid</key>
+				<string>0F8C1F78-6E4C-11D9-91AF-000D93589AF6</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>saveActiveFile</string>
+				<key>command</key>
+				<string>xattr -w com.apple.TextEncoding 'utf-8;134217984' "$TM_FILEPATH"
+</string>
+				<key>input</key>
+				<string>none</string>
+				<key>keyEquivalent</key>
+				<string>@s</string>
+				<key>name</key>
+				<string>save utf8</string>
+				<key>output</key>
+				<string>showAsTooltip</string>
+				<key>uuid</key>
+				<string>C73BE299-27A4-40B1-B8A6-207311933AFE</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>@s</string>
+	<key>name</key>
+	<string>save routine</string>
+	<key>uuid</key>
+	<string>375E8979-34AA-4786-8ED1-D951CD8872D2</string>
+</dict>
+</plist>
