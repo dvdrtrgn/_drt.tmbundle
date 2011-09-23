@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>
+
+Syntax Summary:
+
+   Variables        $TM_FILENAME, $TM_SELECTED_TEXT
+   Fallback Values  ${TM_SELECTED_TEXT:$TM_CURRENT_WORD}
+   Substitutions    ${TM_FILENAME/.*/\U$0/}
+   
+   Tab Stops        $1, $2, $3, … $0 (optional)
+   Placeholders     ${1:default value}
+   Mirrors          &lt;${2:tag}&gt;…&lt;/$2&gt;
+   Transformations  &lt;${3:tag}&gt;…&lt;/${3/(\w*).*/\U$1/}&gt;
+
+   Shell Code       `date`, `pwd`
+
+   Escape Codes     \$ \` \\
+
+
+/*===========================================================================*/
+  shellVariables
+  — an array of key/value pairs. See context dependent variables.
+/*---------------------------------------------------------------------------*/
+  spellChecking
+  — set to 0/1 to disable/enable spell checking.
+/*---------------------------------------------------------------------------*/
+  showInSymbolList
+  — set to 1 to include in the symbol list.
+
+  symbolTransformation
+  — a “program” consisting of one or more s/«regexp»/«format»/«options»; transformations which will be applied to the extracted “symbol”.
+/*---------------------------------------------------------------------------*/
+  decreaseIndentPattern
+  — regular expression.
+  increaseIndentPattern
+  — regular expression.
+  indentNextLinePattern
+  — regular expression.
+  unIndentedLinePattern
+  — regular expression.
+/*---------------------------------------------------------------------------*/
+  completions
+  — an array of additional candidates when cycling through completion candidates from the current document.
+
+  completionCommand
+  — a shell command (string) which should return a list of candidates to complete the current word (obtained via the TM_CURRENT_WORD variable).
+
+  disableDefaultCompletion
+  — set to 1 if you want to exclude matches from the current document when asking for completion candidates (useful when you provide your own completion command).
+
+/*===========================================================================*/
+</string>
+	<key>name</key>
+	<string>notes</string>
+	<key>uuid</key>
+	<string>016FF027-31EE-4964-9F07-0794393D87F6</string>
+</dict>
+</plist>

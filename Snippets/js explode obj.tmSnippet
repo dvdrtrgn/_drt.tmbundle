@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>EXPLODE OBJECT   eg. exp({a:{a:1},b:$.fn.media.defaults});
+
+function explode(o) {
+  var f = arguments.callee;
+  var s = " ";
+  !f.s ? (f.s = s += s) : (s = s += f.s);
+  var r = "\n ";
+  for (var i in o) {
+    var oi = o[i];
+    var to = typeof oi;
+    if (to == "object") {
+      r += to + ": " + i + f(oi);
+    } else {
+      r += s + to + ": \"" + oi + "\"\n ";
+    }
+  }
+  return r;
+}</string>
+	<key>name</key>
+	<string>js explode obj</string>
+	<key>uuid</key>
+	<string>48756B79-959D-4ECA-A50E-AD117E7E0B64</string>
+</dict>
+</plist>
