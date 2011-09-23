@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string># date +%Y-%m-%d:%U</string>
+	<key>extension</key>
+	<string>blah</string>
+	<key>name</key>
+	<string>Useful folder</string>
+	<key>uuid</key>
+	<string>F0F25580-265C-4F2A-B108-3B761C3CBB01</string>
+</dict>
+</plist>

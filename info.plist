@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>deleted</key>
@@ -8,10 +8,59 @@
 	<dict>
 		<key>items</key>
 		<array>
-			<string>4213291A-425F-4106-AD4F-11715D3A8A04</string>
+			<string>8F3CE421-036B-43FE-BCA1-B433A889AC6B</string>
+			<string>F2BFFCEC-C286-4C08-9CB6-D4D497FA68DC</string>
+			<string>898C0B28-2A94-4C77-AE0B-D7C4C055BDA2</string>
+			<string>173FECA9-2E92-4116-AF95-2BD94AA7C9F1</string>
+			<string>------------------------------------</string>
+			<string>62C57905-5C20-4A7D-97F3-55561B79C86B</string>
+			<string>60F3ACDC-C229-47AE-B4FB-B8154A4F8483</string>
+			<string>F16F994A-7AE5-46CD-A342-ACB325302180</string>
+			<string>45F92B81-6F0E-11D9-A1E4-000D9332809C</string>
+			<string>------------------------------------</string>
+			<string>6000D7DE-25FA-4146-B8AE-BBD6C83CAEC1</string>
 		</array>
 		<key>submenus</key>
-		<dict/>
+		<dict>
+			<key>173FECA9-2E92-4116-AF95-2BD94AA7C9F1</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>58533948-4966-4B8A-91C7-93D7200EC223</string>
+					<string>B9936935-71A1-4A4B-8903-2E845E8E5364</string>
+					<string>6F9003F7-F4A0-43CB-95E8-B11A6A6BB37F</string>
+				</array>
+				<key>name</key>
+				<string>Slug</string>
+			</dict>
+			<key>898C0B28-2A94-4C77-AE0B-D7C4C055BDA2</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>016FF027-31EE-4964-9F07-0794393D87F6</string>
+				</array>
+				<key>name</key>
+				<string>Note</string>
+			</dict>
+			<key>8F3CE421-036B-43FE-BCA1-B433A889AC6B</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>48756B79-959D-4ECA-A50E-AD117E7E0B64</string>
+				</array>
+				<key>name</key>
+				<string>JS</string>
+			</dict>
+			<key>F2BFFCEC-C286-4C08-9CB6-D4D497FA68DC</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>3FD687F2-614E-4DF7-9D2E-29FB836C093B</string>
+				</array>
+				<key>name</key>
+				<string>PHP</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>name</key>
 	<string>_drt</string>
