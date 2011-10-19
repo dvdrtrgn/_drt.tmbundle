@@ -4,7 +4,9 @@
 <dict>
 	<key>content</key>
 	<string>
-/* ======================================================================== */
+/** VERSION =============================================================== *
+ *  proj:dir/$TM_FILENAME  ^ david.turgeon @ `scutil --get ComputerName` ^  `date "+%Y-%m-%d"` .. `date "+%Y-%m-%d"`
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 </string>
 	<key>name</key>
 	<string>thick line</string>
