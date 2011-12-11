@@ -6,17 +6,15 @@
 	<string>if [[ ! -f "$TM_NEW_FILE" ]]; then
    TM_DATE=`date -u` \
    perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' \
-      &lt; template_in.txt &gt; "$TM_NEW_FILE"
+      &lt; abc.html &gt; "$TM_NEW_FILE"
 fi
 
 # date +%Y-%m-%d:%U</string>
 	<key>extension</key>
 	<string>txt</string>
 	<key>name</key>
-	<string>pageEasy</string>
-	<key>tabTrigger</key>
-	<string>html1</string>
+	<string>easypage1</string>
 	<key>uuid</key>
-	<string>90EBFE57-A41A-4A6B-A89F-EC18031E363C</string>
+	<string>54386838-FFF0-4864-85A5-B9AB97B49014</string>
 </dict>
 </plist>
