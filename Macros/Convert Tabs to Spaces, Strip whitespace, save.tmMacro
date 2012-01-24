@@ -47,8 +47,6 @@
 			<string>executeCommandWithOptions:</string>
 		</dict>
 	</array>
-	<key>keyEquivalent</key>
-	<string>@s</string>
 	<key>name</key>
 	<string>Convert Tabs to Spaces, Strip whitespace, save</string>
 	<key>scope</key>

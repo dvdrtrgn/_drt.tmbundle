@@ -54,8 +54,6 @@ puts doc_text.gsub(/(\S)[\t ]+$/) { $1 }
 			<string>executeCommandWithOptions:</string>
 		</dict>
 	</array>
-	<key>keyEquivalent</key>
-	<string>@s</string>
 	<key>name</key>
 	<string>strip &amp; save</string>
 	<key>uuid</key>
