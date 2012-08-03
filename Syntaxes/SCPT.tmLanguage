@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>scpt</string>
+	</array>
+	<key>firstLineMatch</key>
+	<string>^FasdUAS</string>
+	<key>name</key>
+	<string>SCPT</string>
+	<key>scopeName</key>
+	<string>binary.applescript</string>
+	<key>uuid</key>
+	<string>84061922-466E-4152-9726-9E1DC74458C3</string>
+</dict>
+</plist>
