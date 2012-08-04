@@ -11,9 +11,11 @@
 #echo Word: "$TM_CURRENT_WORD"
 #echo Selection: "$TM_SELECTED_TEXT"
 
-cd /Users/drt/Dropbox/Library/Application\ Support/TextMate/Pristine\ Copy/Bundles/_drt.tmbundle
-/usr/local/bin/gitx
-cd /Users/drt/Dropbox/Library/Application\ Support/TextMate/Bundles/_drt.tmbundle
+#cd ~"/Library/Application Support/TextMate/Pristine Copy/Bundles/_drt.tmbundle"
+#/usr/local/bin/gitx
+#GX=`which gitx`
+
+cd ~/Library/Application\ Support/TextMate/Bundles/_drt.tmbundle
 /usr/local/bin/gitx
 </string>
 	<key>input</key>

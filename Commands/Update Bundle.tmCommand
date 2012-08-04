@@ -14,7 +14,9 @@ echo Bundle: "$TM_BUNDLE_PATH"
 [ ! -d .git ] &amp;&amp; echo "You must install the bundle using Git in order to update via this command."
 
 osascript -e 'tell app "TextMate" to reload bundles'
+
 open "$TM_BUNDLE_PATH/.."
+/usr/local/bin/gitx "$TM_BUNDLE_PATH/"
 
 echo "&lt;/pre&gt;"
 
