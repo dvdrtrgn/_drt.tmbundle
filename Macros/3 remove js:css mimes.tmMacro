@@ -10,16 +10,15 @@
 				<key>action</key>
 				<string>replaceAll</string>
 				<key>findInProjectIgnoreCase</key>
-				<true/>
+				<false/>
 				<key>findString</key>
-				<string>&gt;
-&lt;/script&gt;</string>
+				<string> type="text/(css|javascript)"</string>
 				<key>ignoreCase</key>
+				<true/>
+				<key>regularExpression</key>
 				<true/>
 				<key>replaceAllScope</key>
 				<string>document</string>
-				<key>replaceString</key>
-				<string>&gt;&lt;/script&gt;</string>
 				<key>wrapAround</key>
 				<true/>
 			</dict>
@@ -28,8 +27,8 @@
 		</dict>
 	</array>
 	<key>name</key>
-	<string>fix tidy script breaks</string>
+	<string>3 remove js/css mimes</string>
 	<key>uuid</key>
-	<string>45761A20-58F2-4AE9-B361-506AE704ED89</string>
+	<string>F32A81C8-687B-46DD-9FAF-07E2B51BFAEC</string>
 </dict>
 </plist>

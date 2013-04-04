@@ -10,9 +10,9 @@
 				<key>action</key>
 				<string>replaceAll</string>
 				<key>findInProjectIgnoreCase</key>
-				<true/>
+				<false/>
 				<key>findString</key>
-				<string>\n\n+</string>
+				<string>\n\n+(?#tighten)</string>
 				<key>ignoreCase</key>
 				<true/>
 				<key>regularExpression</key>
@@ -30,8 +30,8 @@
 		</dict>
 	</array>
 	<key>name</key>
-	<string>tighten</string>
+	<string>2 tighten</string>
 	<key>uuid</key>
-	<string>F6531339-4CC6-45B7-8FC9-AFBD75A5CD55</string>
+	<string>BD02A332-8A2F-4F79-98A1-E0E2B46FD1B2</string>
 </dict>
 </plist>

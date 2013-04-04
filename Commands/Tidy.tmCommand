@@ -11,13 +11,15 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby -wKU
 
+### http://tidy.sourceforge.net/docs/quickref.html
+
 require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
 require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes.rb'
 
 result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
         --break-before-br       yes \
         --clean                 yes \
-        --doctype '"&lt;!DOCTYPE HTML&gt;"' \
+        --doctype '"&lt;!DOCTYPE html&gt;"' \
         --drop-empty-paras      no  \
         --enclose-text          no  \
         --indent                yes \

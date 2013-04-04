@@ -16,13 +16,15 @@
 				<key>command</key>
 				<string>#!/usr/bin/env ruby -wKU
 
+### http://tidy.sourceforge.net/docs/quickref.html
+
 require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
 require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes.rb'
 
 result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
         --break-before-br       yes \
         --clean                 yes \
-        --doctype '"&lt;!DOCTYPE HTML&gt;"' \
+        --doctype '"&lt;!DOCTYPE html&gt;"' \
         --drop-empty-paras      no  \
         --enclose-text          no  \
         --indent                yes \
@@ -35,6 +37,7 @@ result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
         --punctuation-wrap      yes \
         --quiet                 yes \
         --show-warnings         no  \
+        --sort-attributes       "alpha"  \
         --tab-size              4   \
         --tidy-mark             no  \
         --wrap-php              no  \
@@ -109,11 +112,12 @@ end</string>
 							<key>action</key>
 							<string>replaceAll</string>
 							<key>findInProjectIgnoreCase</key>
-							<true/>
+							<false/>
 							<key>findString</key>
-							<string>&gt;
-&lt;/script&gt;</string>
+							<string>&gt;\n&lt;/script&gt;(?#fix tidy script breaks)</string>
 							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
 							<true/>
 							<key>replaceAllScope</key>
 							<string>document</string>
@@ -141,9 +145,9 @@ end</string>
 							<key>action</key>
 							<string>replaceAll</string>
 							<key>findInProjectIgnoreCase</key>
-							<true/>
+							<false/>
 							<key>findString</key>
-							<string>\n\n+</string>
+							<string>\n\n+(?#tighten)</string>
 							<key>ignoreCase</key>
 							<true/>
 							<key>regularExpression</key>
@@ -164,12 +168,43 @@ end</string>
 			<key>command</key>
 			<string>playMacroWithOptions:</string>
 		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAll</string>
+							<key>findInProjectIgnoreCase</key>
+							<false/>
+							<key>findString</key>
+							<string> type="text/(css|javascript)"</string>
+							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>wrapAround</key>
+							<true/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
 	</array>
 	<key>keyEquivalent</key>
-	<string>^H</string>
+	<string>^F</string>
 	<key>name</key>
 	<string>full tidy</string>
 	<key>uuid</key>
-	<string>43612AEA-71FB-402C-B71F-19D4F9E2D3F6</string>
+	<string>F194A824-4C9D-45BB-9C98-DA6C6E675D6D</string>
 </dict>
 </plist>

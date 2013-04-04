@@ -34,8 +34,8 @@
 			<string>------------------------------------</string>
 			<string>60F3ACDC-C229-47AE-B4FB-B8154A4F8483</string>
 			<string>F16F994A-7AE5-46CD-A342-ACB325302180</string>
+			<string>F194A824-4C9D-45BB-9C98-DA6C6E675D6D</string>
 			<string>------------------------------------</string>
-			<string>43612AEA-71FB-402C-B71F-19D4F9E2D3F6</string>
 			<string>A1DBCCBC-B34E-4048-B3EE-FA4FE2D93698</string>
 			<string>FCA39EB2-354F-49BB-B6A0-C92F518F54CE</string>
 			<string>9367029B-3E65-46F1-85AE-FD85AE9849A1</string>
@@ -44,6 +44,10 @@
 			<string>D6844EF1-342B-46D9-A687-CB402F7F4209</string>
 			<string>C5B7D62C-BED8-49BA-BB94-E1534BF3A694</string>
 			<string>375E8979-34AA-4786-8ED1-D951CD8872D2</string>
+			<string>BDFE1510-28E2-45AD-9747-FD4BC1B989C8</string>
+			<string>4213291A-425F-4106-AD4F-11715D3A8A04</string>
+			<string>AB1BF14D-14FF-415B-B63C-D7A67F29D975</string>
+			<string>------------------------------------</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -62,13 +66,14 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>45F92B81-6F0E-11D9-A1E4-000D9332809C</string>
+					<string>194EEC32-F924-495D-9703-D06689457285</string>
+					<string>BD02A332-8A2F-4F79-98A1-E0E2B46FD1B2</string>
+					<string>F32A81C8-687B-46DD-9FAF-07E2B51BFAEC</string>
 					<string>85882AD7-4C93-429E-8F17-885615ADED6A</string>
-					<string>45761A20-58F2-4AE9-B361-506AE704ED89</string>
 					<string>C73BE299-27A4-40B1-B8A6-207311933AFE</string>
 					<string>5BBEE531-FECE-4A3F-ABF3-A7FE0C10A6AE</string>
 					<string>887D24EC-3161-4C52-B545-C8DAC0F29236</string>
-					<string>45F92B81-6F0E-11D9-A1E4-000D9332809C</string>
-					<string>F6531339-4CC6-45B7-8FC9-AFBD75A5CD55</string>
 				</array>
 				<key>name</key>
 				<string>macrohelp</string>
@@ -104,6 +109,21 @@
 				</array>
 				<key>name</key>
 				<string>JS</string>
+			</dict>
+			<key>AB1BF14D-14FF-415B-B63C-D7A67F29D975</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>18B3DB88-CD62-4851-A6C6-1125B4353A5E</string>
+					<string>0E930EAC-4C42-4C86-99DA-6EE9EEA389DA</string>
+					<string>3173B12D-6A02-47C4-8E34-008E89BE7B4F</string>
+					<string>497E4A65-38FC-4D9C-9073-B9D125B5B8D6</string>
+					<string>3E4EC05D-710B-41EA-A2A2-F1C033A5039D</string>
+					<string>9C98DFA6-D607-43F9-B48D-57EEACAB1B7D</string>
+					<string>3466BA71-3072-48D6-AF0F-47B880AC6CA7</string>
+				</array>
+				<key>name</key>
+				<string>armyknife</string>
 			</dict>
 			<key>F2BFFCEC-C286-4C08-9CB6-D4D497FA68DC</key>
 			<dict>
@@ -148,10 +168,11 @@
 		<string>AE151470-1263-4C8A-A3CD-D31CD54EA640</string>
 		<string>C73BE299-27A4-40B1-B8A6-207311933AFE</string>
 		<string>72701480-EE5E-42A1-803E-88A1355EC08A</string>
-		<string>43612AEA-71FB-402C-B71F-19D4F9E2D3F6</string>
-		<string>45761A20-58F2-4AE9-B361-506AE704ED89</string>
+		<string>F194A824-4C9D-45BB-9C98-DA6C6E675D6D</string>
+		<string>194EEC32-F924-495D-9703-D06689457285</string>
+		<string>BD02A332-8A2F-4F79-98A1-E0E2B46FD1B2</string>
+		<string>F32A81C8-687B-46DD-9FAF-07E2B51BFAEC</string>
 		<string>887D24EC-3161-4C52-B545-C8DAC0F29236</string>
-		<string>F6531339-4CC6-45B7-8FC9-AFBD75A5CD55</string>
 		<string>EE1CB46C-411E-4B90-844A-09F433031ED6</string>
 		<string>D6844EF1-342B-46D9-A687-CB402F7F4209</string>
 		<string>C5B7D62C-BED8-49BA-BB94-E1534BF3A694</string>
@@ -164,6 +185,14 @@
 		<string>CC3E01E0-E8C1-4A08-BDAF-02B1DF7C81D3</string>
 		<string>E1EC0409-1310-4D87-88DC-E01CB846D23F</string>
 		<string>FA4321C2-92BB-4630-BB2F-D8894D61D5EE</string>
+		<string>4213291A-425F-4106-AD4F-11715D3A8A04</string>
+		<string>3466BA71-3072-48D6-AF0F-47B880AC6CA7</string>
+		<string>3173B12D-6A02-47C4-8E34-008E89BE7B4F</string>
+		<string>497E4A65-38FC-4D9C-9073-B9D125B5B8D6</string>
+		<string>9C98DFA6-D607-43F9-B48D-57EEACAB1B7D</string>
+		<string>3E4EC05D-710B-41EA-A2A2-F1C033A5039D</string>
+		<string>0E930EAC-4C42-4C86-99DA-6EE9EEA389DA</string>
+		<string>18B3DB88-CD62-4851-A6C6-1125B4353A5E</string>
 	</array>
 	<key>uuid</key>
 	<string>8EF53028-CED5-461A-9A64-894B2C74D0BE</string>
