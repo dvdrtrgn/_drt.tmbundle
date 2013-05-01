@@ -31,8 +31,8 @@ result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
         --indent-spaces         4   \
         --input-xml             no  \
         --join-classes          yes \
-        --new-blocklevel-tags   article,header,footer \
-        --new-inline-tags       video,audio,canvas,ruby,rt,rp \
+        --new-blocklevel-tags   article,aside,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,mark,meter,nav,output,progress,section,time,wbr \
+        --new-inline-tags       audio,canvas,ruby,rt,rp,video \
         --output-html           yes \
         --punctuation-wrap      yes \
         --quiet                 yes \
