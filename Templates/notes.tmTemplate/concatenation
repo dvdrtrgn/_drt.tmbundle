@@ -1,0 +1,19 @@
+// Track concatenation speeds
+
+// timimg	 strings
+// safari   load ~6ms  console ~10ms
+// firefox  load ~2ms  console ~18ms
+
+
+
+  var m='', l='X', s=' ', d1=new Date();
+  for (i=0;i<9999;i++){
+    m += l+s;
+  }
+  var d2=new Date();
+  $('<p>').text(d2-d1+'ms').appendTo('body');
+
+
+
+
+

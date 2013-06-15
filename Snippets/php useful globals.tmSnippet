@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>\$out = array();
+\$not = array('GLOBALS', '_SESSION', 'HTTP_SERVER_VARS', 'HTTP_SESSION_VARS');
+foreach (\$GLOBALS as \$key=&gt;\$val){
+  \$out[\$key] = in_array(\$key,\$not) ? "*removed*" : \$val;
+}
+var_dump(\$out);
+</string>
+	<key>name</key>
+	<string>php useful globals</string>
+	<key>uuid</key>
+	<string>3FD687F2-614E-4DF7-9D2E-29FB836C093B</string>
+</dict>
+</plist>

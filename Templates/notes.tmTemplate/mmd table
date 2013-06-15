@@ -1,0 +1,48 @@
+Tables
+
+I have implemented a syntax for tables similar to that used by Michael Fortin’s PHP Markdown Extra.
+
+Basically, it allows you to turn:
+
+
+<style>
+    table * { border: 1px solid gray; padding: 2px 4px;}
+</style>
+
+[Prototype table]
+|               |          Grouping           ||
+  First Header  | Second Header | Third Header |
+  ------------- | :-----------: | -----------: |
+  Content       |          *Long Cell*        ||
+  Content       |   **Cell**    |     Cell     |
+
+  New section   |     More      |    Data      |
+  _And more_                   ||   And more   |
+
+The requirements are:
+
+There must be at least one | per line
+The second line must contain only |,-,:,., or spaces
+Cell content must be on one line only
+Columns are separated by |
+The first line of the table, and the alignment/divider line, must start at the beginning of the line
+Other notes:
+
+It is optional whether you have |’s at the beginning and end of lines.
+
+To set alignment, you can use a colon to designate left or right alignment, or a colon at each end to designate center alignment, as above. If no colon is present, the default alignment of your system is selected (left in most cases). If you use a period character (.), then char alignment is used - in the future this will allow columns of decimal formatted numbers to be aligned on the decimal character. Browsers do not currently support this feature, so it is somewhat useless at the moment. It could be used in an XSLT stylesheet for other output formats (e.g. LaTeX).
+
+To indicate that a cell should span multiple columns, there simply add additional pipes (|) at the end of the cell, as shown in the example. If the cell in question is at the end of the row, then of course that means that pipes are not optional at the end of that row….
+
+You can use normal Markdown markup within the table cells.
+
+Captions are optional, but if present must be at the beginning of the line immediately preceding or following the table, start with [, and end with ]. If you have a caption before and after the table, only the first match will be used.
+
+If you have a caption, you can also have a label, allowing you to create anchors pointing to the table. If there is no label, then the caption acts as the label
+
+Cells can be empty.
+
+You can create multiple <tbody> tags within a table by having a single empty line between rows of the table. This allows your CSS to place horizontal borders to emphasize different sections of the table.
+
+If there is no header for the first column, then cells in that column will be treated as headers, and formatted as such.
+

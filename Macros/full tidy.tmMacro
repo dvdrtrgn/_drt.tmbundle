@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>captureFormatString</key>
+				<string>$3</string>
+				<key>capturePattern</key>
+				<string>line (\d+) column (\d+) - (.*?)$</string>
+				<key>command</key>
+				<string>#!/usr/bin/env ruby -wKU
+
+### http://tidy.sourceforge.net/docs/quickref.html
+
+require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
+require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes.rb'
+
+result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
+        --break-before-br       yes \
+        --clean                 yes \
+        --doctype '"&lt;!DOCTYPE html&gt;"' \
+        --drop-empty-paras      no  \
+        --enclose-text          no  \
+        --indent                yes \
+        --indent-spaces         4   \
+        --input-xml             no  \
+        --join-classes          yes \
+        --merge-divs            no \
+        --merge-emphasis        no \
+        --merge-spans           no \
+        --new-blocklevel-tags   article,aside,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,mark,meter,nav,output,progress,section,source,time,video,wbr \
+        --new-inline-tags       audio,canvas,ruby,rt,rp \
+        --output-html           yes \
+        --punctuation-wrap      yes \
+        --quiet                 yes \
+        --show-warnings         no  \
+        --sort-attributes       "alpha"  \
+        --tab-size              4   \
+        --tidy-mark             no  \
+        --wrap-php              no  \
+        -wrap 0 -iq -utf8`
+status = $?.exitstatus
+
+at_exit { File.unlink('/tmp/tm_tidy_errors') } # Clean up error log
+
+if status == 2 # Errors
+
+    msg = "Errors: " + File.read('/tmp/tm_tidy_errors')
+    TextMate.exit_show_html msg
+
+elsif status == 1 # Warnings - use output but also display notification with warnings
+
+    log = File.read('/tmp/tm_tidy_errors').to_a.select do |line|
+        ! (ENV['TM_SELECTED_TEXT'] and (line.include?('Warning: missing &lt;!DOCTYPE&gt; declaration') or line.include?("Warning: inserting missing 'title' element")))
+    end.join rescue nil
+
+    unless log.empty?
+        options = {
+            :title   =&gt; "Tidy Warnings",
+            :summary =&gt; "Warnings for tidying your document (press escape to close):",
+            :log     =&gt; log
+        }
+        TextMate::UI.simple_notification(options)
+    end
+
+end
+
+if ENV['TM_SOFT_TABS'] == "YES"
+    print result
+else
+    in_pre = false
+    result.each_line do |line|
+        unless in_pre
+            tab_size    = ENV["TM_TAB_SIZE"].to_i
+            space, text = /( *)(.*)/m.match(line)[1..2]
+            line        = "\t" * (space.length / tab_size).floor + " "  * (space.length % tab_size) + text
+        end
+
+        print line
+
+        in_pre = true   if line.include?("&lt;pre&gt;")
+        in_pre = false  if line.include?("&lt;/pre&gt;")
+    end
+end</string>
+				<key>input</key>
+				<string>selection</string>
+				<key>lineCaptureRegister</key>
+				<string>1</string>
+				<key>name</key>
+				<string>Tidy</string>
+				<key>output</key>
+				<string>replaceSelectedText</string>
+				<key>scope</key>
+				<string>text.html</string>
+				<key>uuid</key>
+				<string>45F92B81-6F0E-11D9-A1E4-000D9332809C</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAll</string>
+							<key>findInProjectIgnoreCase</key>
+							<false/>
+							<key>findString</key>
+							<string>&gt;\n&lt;/script&gt;(?#fix tidy script breaks)</string>
+							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>replaceString</key>
+							<string>&gt;&lt;/script&gt;</string>
+							<key>wrapAround</key>
+							<true/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAll</string>
+							<key>findInProjectIgnoreCase</key>
+							<false/>
+							<key>findString</key>
+							<string>\n\n+(?#tighten)</string>
+							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>replaceString</key>
+							<string>
+</string>
+							<key>wrapAround</key>
+							<true/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAll</string>
+							<key>findInProjectIgnoreCase</key>
+							<false/>
+							<key>findString</key>
+							<string> type="text/(css|javascript)"</string>
+							<key>ignoreCase</key>
+							<true/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>wrapAround</key>
+							<true/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>^F</string>
+	<key>name</key>
+	<string>full tidy</string>
+	<key>uuid</key>
+	<string>F194A824-4C9D-45BB-9C98-DA6C6E675D6D</string>
+</dict>
+</plist>
