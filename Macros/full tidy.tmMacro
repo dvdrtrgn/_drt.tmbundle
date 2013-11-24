@@ -34,8 +34,8 @@ result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
         --merge-divs            no \
         --merge-emphasis        no \
         --merge-spans           no \
-        --new-blocklevel-tags   article,aside,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,mark,meter,nav,output,progress,section,source,time,video,wbr \
-        --new-inline-tags       audio,canvas,ruby,rt,rp \
+        --new-blocklevel-tags   article,aside,command,data,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,main,mark,menu,menuitem,meter,nav,output,progress,section,source,summary,time,track,video \
+        --new-inline-tags       audio,bdi,canvas,math,path,rp,rt,ruby,svg,wbr \
         --output-html           yes \
         --punctuation-wrap      yes \
         --quiet                 yes \
