@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+import sys, os
+
+selection = os.environ.get('TM_SELECTED_TEXT').strip()
+lines = [line.strip() for line in selection.split('\n')]
+output = " ".join(line for line in lines if line)
+sys.stdout.write(output)
+</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Join Lines</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>0E930EAC-4C42-4C86-99DA-6EE9EEA389DA</string>
+</dict>
+</plist>

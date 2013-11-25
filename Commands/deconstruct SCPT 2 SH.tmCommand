@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+BBB="${TM_FILEPATH}"
+DDD="${TM_DIRECTORY}"
+TTT=_`basename "${BBB}" | sed s/\ /-/g | sed s/\.scpt$/\.sh/`
+ZZZ=$DDD/$TTT
+
+echo \#\!/usr/bin/osascript\
+&gt; "${ZZZ}"
+echo &gt;&gt; "${ZZZ}"
+echo &gt;&gt; "${ZZZ}"
+
+osadecompile "${BBB}" &gt;&gt; "${ZZZ}"
+
+if chmod +x "${ZZZ}" &amp;&amp; [[ -x "${ZZZ}" ]]
+   then echo "${ZZZ} is now executable"
+   else echo "Failed making ${ZZZ} executable"
+fi
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@D</string>
+	<key>name</key>
+	<string>deconstruct SCPT 2 SH</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>binary.applescript</string>
+	<key>uuid</key>
+	<string>BDFE1510-28E2-45AD-9747-FD4BC1B989C8</string>
+</dict>
+</plist>

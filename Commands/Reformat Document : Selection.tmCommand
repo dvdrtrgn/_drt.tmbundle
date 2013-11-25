@@ -2,29 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>autoScrollOutput</key>
-	<true/>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
-require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
-result = `#{ENV['TM_PHP'] || 'php'} -r "${TM_SELECTED_TEXT:-$TM_CURRENT_LINE}" `
-puts result
+
+puts `python -m json.tool`
 </string>
-	<key>fallbackInput</key>
-	<string>line</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
-	<string>@R</string>
+	<string>^H</string>
 	<key>name</key>
-	<string>PHP Run</string>
+	<string>Reformat Document / Selection</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>replaceSelectedText</string>
 	<key>scope</key>
-	<string>source.php</string>
+	<string>source.json</string>
 	<key>uuid</key>
-	<string>9367029B-3E65-46F1-85AE-FD85AE9849A1</string>
+	<string>4B74F2DE-E051-4E8D-9124-EBD90A2CDD2B</string>
 </dict>
 </plist>

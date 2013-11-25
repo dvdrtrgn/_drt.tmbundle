@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;!-- demonstrate ;; scratch pad for quickies --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;[demo ...]&lt;/title&gt;
+    &lt;style type="text/css"&gt;@import url(style.css);&lt;/style&gt;
+    &lt;script type="text/javascript" src="/_js/_lib/bootstrap.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="code.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h3&gt;tm `date -u`&lt;/h3&gt;
+    &lt;h4&gt;&lt;a href=".."&gt;demonstrate:&lt;/a&gt;&lt;/h4&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Reason: 1&lt;/li&gt;
+      &lt;li&gt;Reason: 2&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;script type="text/javascript"&gt;
+      /* quick code testing */
+    &lt;/script&gt;
+    &lt;textarea id="_in" cols="66" rows="6"&gt;&lt;/textarea&gt;
+    &lt;input type="button" onmousedown="doit()" value="doit"&gt;
+    &lt;pre id="_out"&gt;?&lt;/pre&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</string>
+	<key>name</key>
+	<string>demo helpers</string>
+	<key>scope</key>
+	<string>text,html</string>
+	<key>tabTrigger</key>
+	<string>demo</string>
+	<key>uuid</key>
+	<string>A1DBCCBC-B34E-4048-B3EE-FA4FE2D93698</string>
+</dict>
+</plist>

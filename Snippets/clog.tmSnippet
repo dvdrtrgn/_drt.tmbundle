@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleUUID</key>
+	<string>8EF53028-CED5-461A-9A64-894B2C74D0BE</string>
+	<key>content</key>
+	<string>(typeof(clog)!=='undefined'||(clog=function(){
+    window.console &amp;&amp; console.log.apply(console,arguments)
+}));
+</string>
+	<key>name</key>
+	<string>clog</string>
+	<key>tabTrigger</key>
+	<string>clog</string>
+	<key>uuid</key>
+	<string>FCA39EB2-354F-49BB-B6A0-C92F518F54CE</string>
+</dict>
+</plist>

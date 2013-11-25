@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+# a=2, b=3, c='acd'
+# { 'a':2, 'b': 3, 'c': 'acd' }
+
+import sys, os
+
+selection = os.environ['TM_SELECTED_TEXT']
+try:
+	values = [x.strip() for x in selection.split(",")]
+	pairs = [x.split('=', 2) for x in values]
+
+	dict_pairs = ["'%s': %s" % (x[0], x[1]) for x in pairs]
+
+	output = '{' + ', '.join(dict_pairs) + '}'
+	sys.stdout.write(output)
+except:
+	sys.stdout.write(selection)
+</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Params to dict</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>3E4EC05D-710B-41EA-A2A2-F1C033A5039D</string>
+</dict>
+</plist>
