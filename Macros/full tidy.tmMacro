@@ -22,8 +22,8 @@ require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
 require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes.rb'
 
 result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
-        --break-before-br       yes \
-        --clean                 yes \
+        --break-before-br       no \
+        --clean                 no \
         --doctype '"&lt;!DOCTYPE html&gt;"' \
         --drop-empty-paras      no  \
         --enclose-text          no  \
@@ -40,7 +40,7 @@ result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
         --punctuation-wrap      yes \
         --quiet                 yes \
         --show-warnings         no  \
-        --sort-attributes       "alpha"  \
+#       --sort-attributes       "alpha"  \
         --tab-size              4   \
         --tidy-mark             no  \
         --wrap-php              no  \
