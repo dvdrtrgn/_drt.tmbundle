@@ -21,30 +21,7 @@
 require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'
 require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes.rb'
 
-result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors \
-        --break-before-br       no \
-        --clean                 no \
-        --doctype '"&lt;!DOCTYPE html&gt;"' \
-        --drop-empty-paras      no  \
-        --enclose-text          no  \
-        --indent                yes \
-        --indent-spaces         4   \
-        --input-xml             no  \
-        --join-classes          yes \
-        --merge-divs            no \
-        --merge-emphasis        no \
-        --merge-spans           no \
-        --new-blocklevel-tags   article,aside,command,data,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,main,mark,menu,menuitem,meter,nav,output,progress,section,source,summary,time,track,video \
-        --new-inline-tags       audio,bdi,canvas,math,path,rp,rt,ruby,svg,wbr \
-        --output-html           yes \
-        --punctuation-wrap      yes \
-        --quiet                 yes \
-        --show-warnings         no  \
-#       --sort-attributes       "alpha"  \
-        --tab-size              4   \
-        --tidy-mark             no  \
-        --wrap-php              no  \
-        -wrap 0 -iq -utf8`
+result = `"${TM_TIDY:-tidy}" -f /tmp/tm_tidy_errors -iq -utf8`
 status = $?.exitstatus
 
 at_exit { File.unlink('/tmp/tm_tidy_errors') } # Clean up error log
